@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+       android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        >
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	
+   <com.cute.xiaoy.TitleLayout
+         android:id="@+id/title_setting"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	
+       />
+        
+    <RelativeLayout 
+        android:id="@+id/rl_head"
+        android:layout_marginTop="5sp"
+        android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal" 
+        
+        >
+        <TextView 
+            android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:text="头像"
+	    	android:layout_centerVertical="true"
+	    	android:layout_marginLeft="5sp"
+            />
+        <ImageView 
+            android:id="@+id/img_head"
+	    	android:src="@drawable/me"
+	    	android:layout_height="49sp"
+	    	android:layout_width="49sp"
+	    	android:layout_alignParentRight="true"
+	    	android:layout_marginRight="5sp"
+            />
+        
+   </RelativeLayout>
+   
+   
+   <TextView 
+        android:layout_width="wrap_content"
+   		android:layout_height="wrap_content"
+   		android:text="昵称:"
+       />
+    <EditText 
+        android:id="@+id/set_et_name"
+         android:layout_width="match_parent"
+   		 android:layout_height="wrap_content"
+   		 android:hint="请输入昵称"
+        />
+	<LinearLayout 
+	     android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+	    >
+
+		<TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="性别" 
+		    android:layout_marginTop="5dp"
+		    
+		    />
+
+	<RadioGroup
+	    android:id="@+id/set_rg_sex"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	     >
+
+	    <RadioButton
+	        android:id="@+id/set_radio0"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:checked="true"
+	        android:text="男" />
+
+	    <RadioButton
+	        android:id="@+id/set_radio1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="女" />
+	</RadioGroup>
+
+	
+</LinearLayout>
+	<TextView 
+        android:layout_width="wrap_content"
+   		android:layout_height="wrap_content"
+   		android:text="年龄"
+       />
+	<EditText 
+	    android:id="@+id/set_et_userage"
+	    android:layout_width="match_parent"
+   		android:layout_height="wrap_content"
+   		android:hint="请输入年龄"
+	    />
+	
+	<TextView 
+        android:layout_width="wrap_content"
+   		android:layout_height="wrap_content"
+   		android:text="机器人名字"
+       />
+	<EditText 
+	    android:id="@+id/set_et_robotname"
+	    android:layout_width="match_parent"
+   		android:layout_height="wrap_content"
+   		android:hint="请设置您的机器人的名字"
+	    />
+	<LinearLayout 
+		android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:orientation="horizontal"
+    	
+	    >
+	    
+	    <Button
+	    android:id="@+id/set_bt_save"
+	    android:layout_width="0dp"
+	      android:layout_weight="1"
+	    android:layout_height="wrap_content"
+	    android:text="保存" 
+	    android:background="@drawable/bt_send_bg"
+	    android:onClick="create_user"
+	    />
+
+	<Button
+	    android:id="@+id/set_bt_cancel"
+	    android:layout_width="0dp"
+	    android:layout_weight="1"
+	    android:layout_height="wrap_content"
+	    android:text="取消"
+	     android:background="@drawable/bt_send_bg"
+	     android:onClick="back"
+	     />
+	</LinearLayout>
+	
+
+</LinearLayout>
+</ScrollView>

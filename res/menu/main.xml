@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_settings"
+        android:title="设置个人信息"/>
+     <item
+        android:id="@+id/action_back2login"
+        android:title="返回登陆界面"/>
+      <item
+        android:id="@+id/action_remove"
+        android:title="remove"/>
+       <item
+        android:id="@+id/action_forceoffline"
+        android:title="强制下线"/>
+        <item
+        android:id="@+id/action_notification"
+        android:title="通知"/>
+        <item
+        android:id="@+id/action_loadbigimage"
+        android:title="加载大图片到内存"/>
+         
+</menu>

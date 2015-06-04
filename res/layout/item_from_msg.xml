@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+   
+    >
+    <TextView 
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="4dp"
+       android:id="@+id/from_msg_date"
+        android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:text="2015-01-15 23:32:22"
+  		android:textSize="13sp"
+  		android:textColor="#f5f5f5"
+  		android:background="#bcbcbc"
+  		android:layout_gravity="center_horizontal"
+        />
+    
+    <RelativeLayout 
+       android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	
+        >
+        <LinearLayout 
+             android:id="@+id/ly_from_msg_img"
+	         android:layout_width="wrap_content"
+	    	 android:layout_height="wrap_content"
+	    	 android:orientation="vertical"
+            >
+            <ImageView 
+                android:src="@drawable/icon"
+                android:layout_width="49dp"
+                android:layout_height="49dp"
+                />
+            <TextView
+                android:id="@+id/from_name"
+                 android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:text="小y°"
+    			android:layout_gravity="center_horizontal"
+                />
+            
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/from_msg_img"
+            android:layout_width="58dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+        <TextView 
+            android:id="@+id/from_msg"
+            android:layout_width="wrap_content"
+   			android:layout_height="wrap_content"
+   			android:textSize="15sp"
+   			android:text="你好!你好!你好!你好!你好!你好!你好!你好!你好!你好!你好!你好!你好!你好!"
+   			android:background="@drawable/chatfrom_bg_normal"
+   			android:layout_toLeftOf="@id/from_msg_img"
+   			android:layout_toRightOf="@id/ly_from_msg_img"
+            />
+
+        
+
+    </RelativeLayout>
+
+</LinearLayout>

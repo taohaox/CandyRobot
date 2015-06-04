@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cute.xiaoy"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    <!-- 访问网络 -->
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<!-- 监听网络状态 -->
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<!-- 在通知中显示对话框的权限 -->
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+	<!-- 手机震动的权限 -->
+	<uses-permission android:name="android.permission.VIBRATE"/>
+	<!-- 短信接收的权限 -->
+	<uses-permission android:name="android.permission.RECEIVE_SMS"/>
+	<!-- 照相 -->
+	<uses-permission android:name="android.permission.CAMERA"></uses-permission> 
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        >
+        <!-- 注册监听广播   因为网络改变时会发出广播  android.net.conn.CONNECTIVITY_CHANGE-->
+	 <receiver android:name="com.cute.xiaoy.receiver.MyReceiver"   
+             android:label="NetworkConnection">   
+      <intent-filter>   
+          <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>   
+      </intent-filter>   
+  	</receiver>
+  	
+	<receiver android:name="com.cute.xiaoy.receiver.ForceOfflineReceiver">
+	    <intent-filter >
+	        <action android:name="com.cute.xiaoy.receiver.FORCE_OFFLINE"/>
+	    </intent-filter>
+	    
+	</receiver>
+	<receiver android:name="com.cute.xiaoy.receiver.SmsReceiver">
+	    <!-- 设置过滤器的优先级   -1000 - 1000   1000为最高   系统短信接收默认为0 -->
+	     <intent-filter android:priority="1000">
+	         <!-- 短信到来是的广播过滤器   一般在intent类中 隐藏的 要手动复制   api中找不到 -->
+	        <action android:name="android.provider.Telephony.SMS_RECEIVED"/>  
+	     </intent-filter>
+	    </receiver>
+        <activity
+            android:name="com.cute.xiaoy.MainActivity"
+            android:label="@string/app_name" 
+            
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" 
+            >
+           
+        </activity>
+         <activity
+            android:name="com.cute.xiaoy.SettingActivity"
+            android:label="@string/app_name" 
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" 
+            >
+           
+        </activity>
+        <activity
+            android:name="com.cute.xiaoy.LoginActivity"
+            android:label="@string/app_name" 
+            
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" 
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter >
+        </activity>
+         <activity
+            android:name="com.cute.xiaoy.RegisterActivity"
+            android:label="@string/app_name" 
+            
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" 
+            >
+            
+        </activity>
+        <activity
+            android:name="com.cute.xiaoy.test.ImageLoadActivity"
+            android:label="@string/app_name" 
+            
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" 
+            >
+            
+        </activity>
+         <activity
+            android:name="com.cute.xiaoy.SettingActivity_HeadImg"
+            android:label="@string/app_name" 
+            
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" 
+            >
+            
+        </activity>
+         <activity
+            android:name="com.cute.xiaoy.ImageScanActivity"
+            android:label="@string/app_name" 
+            
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" 
+            >
+            
+        </activity>
+    </application>
+
+</manifest>
