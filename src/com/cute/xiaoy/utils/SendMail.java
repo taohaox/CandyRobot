@@ -19,21 +19,15 @@ import android.os.Handler;
 import android.util.Log;
 import android.widget.Toast;
 public class SendMail {
-	String username = "taohao110";
-	String password = "a711218";
-	String smtpHost = "smtp.qq.com";
-	String sendText = "this is a test mail";
-	String sendTitle = "hello, javamail";
-	String addressFrom = "taohao110@qq.com";
-	String addressTo = "taohao110@qq.com";
 	
-	/*String username = "csyouxiang71";
-	String password = "csyouxiang";
+	//使用的邮箱需要开通smtp服务
+	String username = "csyouxiang71";
+	String password = "zaazzkfblqabpayu";
 	String smtpHost = "smtp.163.com";
 	String sendText = "this is a test mail";
 	String sendTitle = "hello, javamail";
 	String addressFrom = "csyouxiang71@163.com";
-	String addressTo = "csyouxiang71@163.com";*/
+	String addressTo = "csyouxiang71@163.com";
 	
 	 public SendMail(String sendText, String sendTitle) {
 		super();
@@ -78,9 +72,9 @@ public class SendMail {
 				 Transport transport = session.getTransport("smtp");
 				 transport.connect(smtpHost, username, password);
 				 
-				 Toast.makeText(context, "邮箱服务器登陆成功", 1500).show();
+				// Toast.makeText(context, "邮箱服务器登陆成功", 1500).show();
 				 transport.send(message);
-				 Toast.makeText(context, "邮件发送成功成功", 1500).show();
+				// Toast.makeText(context, "邮件发送成功成功", 1500).show();
 				 transport.close();
 			 }
 			

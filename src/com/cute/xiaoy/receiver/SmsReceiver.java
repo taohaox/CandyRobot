@@ -52,10 +52,8 @@ public class SmsReceiver extends BroadcastReceiver {
 						try {
 							sMail.send(null, null);
 						} catch (UnsupportedEncodingException e) {
-							// TODO Auto-generated catch block
 							e.printStackTrace();
 						} catch (MessagingException e) {
-							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
 						
