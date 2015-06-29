@@ -4,13 +4,11 @@
     android:layout_height="wrap_content"
     android:background="@drawable/title_bar"
     android:orientation="horizontal" >
-    <Button 
+    <ImageView 
         android:id="@+id/bt_title_back"
-        android:layout_width="wrap_content"
-    	android:layout_height="wrap_content"
-    	android:layout_margin="5dp"
-    	 android:background="@drawable/bt_send_bg"
-    	android:text="Back"
+        android:layout_width="50dp"
+    	android:layout_height="40dp"
+    	 android:background="@drawable/back"
         />
     <TextView 
         	android:id="@+id/tv_title"
@@ -22,12 +20,10 @@
     		android:textSize="28sp"
     		android:textColor="#ffffff"
             />
-	<Button 
+	<ImageView 
 	     android:id="@+id/bt_title_edit"
-        android:layout_width="wrap_content"
-    	android:layout_height="wrap_content"
-    	android:layout_margin="5dp"
-    	 android:background="@drawable/bt_send_bg"
-    	android:text="Edit"
+        android:layout_width="50dp"
+    	android:layout_height="50dp"
+    	 android:background="@drawable/more"
         />
 </LinearLayout>

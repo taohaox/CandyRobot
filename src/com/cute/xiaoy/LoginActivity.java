@@ -1,6 +1,5 @@
 package com.cute.xiaoy;
 
-import android.app.Activity;
 import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
@@ -9,8 +8,8 @@ import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,7 +34,7 @@ public class LoginActivity extends BaseActivity {
 		TextView tv_title = (TextView)view.findViewById(R.id.tv_title);
 		tv_title.setText("用户登录");
 		//隐藏设置按钮
-		Button bt_edit = (Button) view.findViewById(R.id.bt_title_edit);
+		ImageView bt_edit = (ImageView) view.findViewById(R.id.bt_title_edit);
 		bt_edit.setVisibility(View.INVISIBLE);
 		
 		et_username = (EditText) findViewById(R.id.et_username);

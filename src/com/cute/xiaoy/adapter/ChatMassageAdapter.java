@@ -100,6 +100,8 @@ public class ChatMassageAdapter extends BaseAdapter {
 				viewholder.mImg = (ImageView) convertView.findViewById(R.id.iv_myimg);
 				if(!"".equals(mHeadpath)){
 					viewholder.mImg.setImageBitmap(BitmapFactory.decodeFile(mHeadpath));
+				}else{
+					viewholder.mImg.setImageResource(R.drawable.me);
 				}
 				
 			}else{
