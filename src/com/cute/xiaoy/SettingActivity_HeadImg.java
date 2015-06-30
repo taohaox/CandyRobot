@@ -45,7 +45,7 @@ public class SettingActivity_HeadImg extends BaseActivity{
 		System.out.println("screen_width:"+screen_width);
 		choice = (Button) findViewById(R.id.bt_choice_by_photos);
 		photograph = (Button) findViewById(R.id.bt_photograph);
-		dir = Environment.getExternalStorageDirectory();//获取应用程序的文件保存路径
+		dir = Environment.getExternalStorageDirectory();//获取应用程序的文件保存路径   必须要用外部存储目录  不然不能保持照片
 		//创建一个文件  用来保存拍好的照片
 		file = new File(dir,imgname);
 		if(file.exists()){

@@ -58,7 +58,7 @@ public class SettingActivity extends BaseActivity{
 		TextView tv_title = (TextView)view.findViewById(R.id.tv_title);
 		tv_title.setText("个人信息");
 		//隐藏设置按钮
-		Button bt_edit = (Button) view.findViewById(R.id.bt_title_edit);
+		ImageView bt_edit = (ImageView) view.findViewById(R.id.bt_title_edit);
 		bt_edit.setVisibility(View.INVISIBLE);
 		initView();
 		initData();
@@ -184,7 +184,12 @@ public class SettingActivity extends BaseActivity{
 			public void onClick(View v) {
 				Intent intent = new Intent(SettingActivity.this,ImageScanActivity.class);
 				intent.putExtra("filepath", filepath);
-				startActivity(intent);
+				if("".equals(filepath)||filepath==null){
+					
+				}else{
+					startActivity(intent);
+				}
+				
 			}
 		});
 		
